@@ -1,0 +1,58 @@
+{
+  "auth": {
+    "login": {
+      "title": "Sign in",
+      "description": "Use your email and password.",
+      "email": "Email",
+      "password": "Password",
+      "forgot": "Forgot your password?",
+      "submit": "Sign in",
+      "submitPending": "Signing in…",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create account"
+    },
+    "signup": {
+      "title": "Create account",
+      "description": "Your health, in one place.",
+      "fullName": "Full name",
+      "submit": "Create account",
+      "submitPending": "Creating account…",
+      "haveAccount": "Already have an account?",
+      "login": "Sign in",
+      "checkInbox": "Check your inbox",
+      "checkInboxBody": "We sent a confirmation link. Click it to activate your account and return to CLEOM."
+    },
+    "recovery": {
+      "title": "Recover password",
+      "description": "We'll email you a link to set a new one.",
+      "submit": "Send reset link",
+      "back": "Back to sign in"
+    },
+    "updatePassword": {
+      "title": "New password",
+      "description": "Enter a new password for your account.",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "submit": "Update password"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "wallet": "Wallet",
+    "ai": "Cleom AI",
+    "telemedicine": "Care",
+    "alerts": "Alerts",
+    "doctor": "Doctor",
+    "settings": "Settings",
+    "logout": "Sign out"
+  },
+  "dashboard": {
+    "greeting": "Hello, {name}",
+    "subtitle": "Here's what you can do today for your health."
+  },
+  "common": {
+    "loading": "Loading…",
+    "error": "Something went wrong.",
+    "back": "Back"
+  }
+}

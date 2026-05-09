@@ -1,0 +1,58 @@
+{
+  "auth": {
+    "login": {
+      "title": "Ingresar",
+      "description": "Accedé con tu email y contraseña.",
+      "email": "Email",
+      "password": "Contraseña",
+      "forgot": "¿Olvidaste tu contraseña?",
+      "submit": "Ingresar",
+      "submitPending": "Ingresando…",
+      "noAccount": "¿No tenés cuenta?",
+      "createAccount": "Crear cuenta"
+    },
+    "signup": {
+      "title": "Crear cuenta",
+      "description": "Tu salud, en un solo lugar.",
+      "fullName": "Nombre completo",
+      "submit": "Crear cuenta",
+      "submitPending": "Creando cuenta…",
+      "haveAccount": "¿Ya tenés cuenta?",
+      "login": "Ingresar",
+      "checkInbox": "Revisa tu email",
+      "checkInboxBody": "Te enviamos un link de confirmación. Hacé clic para activar tu cuenta y volver a CLEOM."
+    },
+    "recovery": {
+      "title": "Recuperar contraseña",
+      "description": "Te enviamos un link para crear una nueva.",
+      "submit": "Enviar link de recuperación",
+      "back": "Volver al login"
+    },
+    "updatePassword": {
+      "title": "Nueva contraseña",
+      "description": "Ingresá una contraseña nueva para tu cuenta.",
+      "newPassword": "Nueva contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "submit": "Actualizar contraseña"
+    }
+  },
+  "navigation": {
+    "home": "Inicio",
+    "wallet": "Cartera",
+    "ai": "Cleom AI",
+    "telemedicine": "Atención",
+    "alerts": "Alertas",
+    "doctor": "Doctor",
+    "settings": "Ajustes",
+    "logout": "Cerrar sesión"
+  },
+  "dashboard": {
+    "greeting": "Hola, {name}",
+    "subtitle": "Esto es lo que podés hacer hoy con tu salud."
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "Algo salió mal.",
+    "back": "Volver"
+  }
+}
