@@ -27,3 +27,6 @@ coverage/
 next-env.d.ts
 *.pem
 .turbo/
+
+# Vercel
+.vercel

@@ -29,6 +29,34 @@ Ver [`.env.example`](./.env.example). Mínimas para correr:
 | `NEXT_PUBLIC_AUTH_CALLBACK_PATH` | Path del callback (default `/auth/callback`). |
 | `NEXT_PUBLIC_AUTH_RECOVERY_REDIRECT_PATH` | Path del flow de reset password (default `/auth/update-password`). |
 
+## Deploy en Vercel
+
+Vercel auto-detecta Next.js. `vercel.json` solo fija `"framework": "nextjs"` para evitar autodetección incorrecta si el repo se importa dentro de un monorepo.
+
+### Primer deploy
+
+1. Sube el repo a GitHub/GitLab/Bitbucket.
+2. En Vercel: **New Project → Import** y elige el repo. Root: la carpeta del proyecto (no la del monorepo `cleom-setup`).
+3. **Environment Variables** — agregar las 5 vars de la tabla de arriba. Para producción, `NEXT_PUBLIC_APP_URL` debe ser el dominio público (p.ej. `https://app.cleom.com`), no `localhost:3002`.
+4. **Deploy**.
+
+### Supabase Dashboard — actualizar URLs antes del primer login en prod
+
+Una vez que tengas el dominio de Vercel (o el custom domain), volvé a **Authentication → URL Configuration** y agregá:
+
+| Campo | Valor (prod) |
+|---|---|
+| Site URL | `https://app.cleom.com` (o el dominio real) |
+| Redirect URLs | `https://app.cleom.com/auth/callback`, `https://app.cleom.com/auth/update-password` |
+
+Sin esto, el callback de OAuth/email rechaza el redirect y el usuario queda atascado tras hacer click en el email.
+
+### Notas
+
+- `npm run start -p 3002` no se usa en Vercel — corre serverless con su propio runtime. El `-p 3002` solo aplica a `npm run dev`/`npm run start` locales.
+- Headers de seguridad (`X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, `X-DNS-Prefetch-Control`) están en `next.config.ts`. HSTS lo agrega Vercel.
+- `proxy.ts` (Next 16, ex `middleware.ts`) maneja la protección de rutas + refresh de cookies Supabase. Vercel lo ejecuta como Edge Middleware automáticamente.
+
 ## Configuración requerida en Supabase Dashboard
 
 Antes de probar el flow de auth completo (signup → email → login), ir al proyecto Supabase → **Authentication → URL Configuration**:
